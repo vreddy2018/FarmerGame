@@ -1,8 +1,12 @@
 /**
-*
-* <description project>
-* @author
-* @version
+* This is the Farmer's Game
+* The game is a puzzle involving a human, sheep, cabbage, and wolf
+* The user has to get all the things across a river without any of them being eaten
+* Only the human can operate the boat with only one passenger
+* The sheep cant be left alone with the cabbage
+* The wolf cant be left alone with the sheep
+* @author - Neil Reddy
+* @version - 1.0
 */
 
 import java.util.Scanner;
@@ -35,20 +39,27 @@ public class FarmersGame
 	
 	
 	/**
-	*
-	*
+	* This function prints the welcome messages
+	* The messages introduce the game
+	* This function has no arguments and returns nothing
 	*/
 	public static void welcome()
 	{
 	
-		System.out.println("Farmer's Game");
+		System.out.println("Welcome to the Farmer's Game");
+		System.out.println("To win the game you have to get the human, cabbage, wolf, and sheep across the river safely.");
+		System.out.println("Only the human can operate the boat, and only one passenger can fit.");
+		System.out.println("If the sheep is left alone with the cabbage, the sheep will eat the cabbage.");
+		System.out.println("If the wolf is left alone with the sheep, the wolf will eat the sheep.");
+		System.out.println("It is up to you to figure out how to get them all across without anything being eaten.");
 		
 	}
 	
 	
 	/**
-	*
-	*
+	* This function prints the game board
+	* It prints the animals represented by the first letter in their name on whatever side of the river they are on
+	* This function has no arguments and returns nothing
 	*/
 	public static void displayGameStatus()
 	{
@@ -87,8 +98,12 @@ public class FarmersGame
 	
 	
 	/**
-	*
-	*
+	* This function checks to see if the user has won or lost
+	* It checks to see if certain things were left alone without the human
+	* It also checks to see if everything made it across the river
+	* This function has no arguments
+	* @return - 0 if the game is over because either everything crossed or the user lost
+	* @return - 1 if the user has not lost and the game is still ongoing
 	*/
 	public static int checkGame()
 	{
@@ -116,6 +131,13 @@ public class FarmersGame
 	}
 	
 	
+	
+	/**
+	* This function gets the input from the user for the character the person wants to move
+	* The function checks to make sure the human is on the same side as the character
+	* The function has no arguments and does not return anything
+	*
+	*/
 	public static void move()
 	{
 		Scanner kb = new Scanner(System.in);
