@@ -104,6 +104,12 @@ public class FarmersGame
 			return 0;	
 		} 
 		
+		else if (wolf == sheep && human == sheep && sheep == cabb && human == true)
+		{
+			System.out.println("You WIN!!!");
+			return 0;
+		}
+		
 		else
 			return 1;
 			
