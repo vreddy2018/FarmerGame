@@ -107,15 +107,15 @@ public class FarmersGame
 	*/
 	public static int checkGame()
 	{
-		if (cabb == sheep && !(human == cabb))
+		if (cabb == sheep && !(human == cabb) && !(cabb ==wolf))
 		{
-			System.out.println("You lose");	
+			System.out.println("You lose! Sheep at the cabbage");	
 			return 0;
 		} 
 		
-		else if (wolf == sheep && !(human == wolf))
+		else if (wolf == sheep && !(human == wolf) && !(cabb ==wolf))
 		{
-			System.out.println("You lose");
+			System.out.println("You lose! Wolf ate the sheep." );
 			return 0;	
 		} 
 		
@@ -154,7 +154,7 @@ public class FarmersGame
 			
 			else
 			{
-				System.out.println("Move not possible");
+				System.out.println("Move not possible. The human is the only one who can operate the boat.");
 			}
 			
 		}		
